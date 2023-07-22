@@ -13,4 +13,7 @@ class AppColors {
 
   /// Cinza.
   static const Color grey = Color(0xff9C9999);
+
+  /// Vermelho.
+  static const Color red = Color(0xff9A1010);
 }
