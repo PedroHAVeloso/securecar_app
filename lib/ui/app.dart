@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:securecar_app/ui/pages/splash/splash_page.dart';
 import 'package:securecar_app/ui/pages/welcome/welcome_page.dart';
 import 'package:securecar_app/ui/utils/app_theme.dart';
 
@@ -11,7 +10,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      home: WelcomePage(),
+      home: const WelcomePage(),
     );
   }
 }

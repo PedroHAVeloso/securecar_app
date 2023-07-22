@@ -5,6 +5,51 @@ import 'package:securecar_app/ui/utils/app_colors.dart';
 class AppTheme {
   /// Tema claro.
   static ThemeData lightTheme = ThemeData(
+    fontFamily: 'Montserrat',
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        side: const BorderSide(
+          color: AppColors.green,
+          width: 5,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(
+            30,
+          ),
+        ),
+      ),
+    ),
+    filledButtonTheme: FilledButtonThemeData(
+      style: FilledButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(
+            30,
+          ),
+        ),
+      ),
+    ),
+    textTheme: const TextTheme(
+      titleLarge: TextStyle(
+        color: AppColors.black,
+        fontSize: 18,
+        fontWeight: FontWeight.w700,
+      ),
+      titleMedium: TextStyle(
+        color: AppColors.black,
+        fontSize: 18,
+        fontWeight: FontWeight.w500,
+      ),
+      labelLarge: TextStyle(
+        color: AppColors.black,
+        fontSize: 24,
+        fontWeight: FontWeight.w700,
+      ),
+      labelMedium: TextStyle(
+        color: AppColors.black,
+        fontSize: 24,
+        fontWeight: FontWeight.w500,
+      ),
+    ),
     scaffoldBackgroundColor: AppColors.white,
     colorScheme: const ColorScheme(
       brightness: Brightness.light,

@@ -28,6 +28,6 @@ flutter:
       fonts:
         - asset: fonts/Montserrat-Medium.ttf
           weight: 500
-        - asset: fonts/Raleway-Bold.ttf
+        - asset: fonts/Montserrat-Bold.ttf
           weight: 700
           
