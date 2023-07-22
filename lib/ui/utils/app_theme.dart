@@ -28,6 +28,35 @@ class AppTheme {
         ),
       ),
     ),
+    inputDecorationTheme: InputDecorationTheme(
+      hintStyle: const TextStyle(
+        color: AppColors.black,
+        fontSize: 18,
+        fontWeight: FontWeight.w500,
+      ),
+      contentPadding: const EdgeInsets.all(20),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(30),
+        borderSide: const BorderSide(
+          width: 5,
+          color: AppColors.green,
+        ),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(30),
+        borderSide: const BorderSide(
+          width: 5,
+          color: AppColors.green,
+        ),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(30),
+        borderSide: const BorderSide(
+          width: 5,
+          color: AppColors.green,
+        ),
+      ),
+    ),
     textTheme: const TextTheme(
       titleLarge: TextStyle(
         color: AppColors.black,
