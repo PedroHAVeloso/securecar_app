@@ -78,6 +78,16 @@ class AppTheme {
         fontSize: 24,
         fontWeight: FontWeight.w500,
       ),
+      bodyLarge: TextStyle(
+        color: AppColors.black,
+        fontSize: 14,
+        fontWeight: FontWeight.w700,
+      ),
+      bodyMedium: TextStyle(
+        color: AppColors.black,
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
+      ),
     ),
     scaffoldBackgroundColor: AppColors.white,
     colorScheme: const ColorScheme(

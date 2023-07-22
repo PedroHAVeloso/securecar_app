@@ -12,7 +12,9 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarWidget(),
+      appBar: const AppBarWidget(
+        isLogo: false,
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -58,7 +60,7 @@ class LoginPage extends StatelessWidget {
                   height: 70,
                 ),
                 const Spacer(
-                  flex: 3,
+                  flex: 2,
                 ),
               ],
             ),
