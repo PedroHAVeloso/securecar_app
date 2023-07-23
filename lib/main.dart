@@ -1,5 +1,7 @@
 import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:securecar_app/ui/app.dart';
 import 'package:securecar_app/ui/pages/splash/splash_page.dart';
 
@@ -9,7 +11,7 @@ void main() async {
 
   runApp(const SplashPage());
 
-  await Future<void>.delayed(const Duration(seconds: 1));
+  await Hive.initFlutter();
 
   runApp(const App());
 

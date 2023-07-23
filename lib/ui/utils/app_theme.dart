@@ -42,6 +42,20 @@ class AppTheme {
           color: AppColors.green,
         ),
       ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(30),
+        borderSide: const BorderSide(
+          width: 5,
+          color: AppColors.red,
+        ),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(30),
+        borderSide: const BorderSide(
+          width: 5,
+          color: AppColors.red,
+        ),
+      ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(30),
         borderSide: const BorderSide(
@@ -101,7 +115,7 @@ class AppTheme {
       background: AppColors.white,
       onBackground: AppColors.black,
       surface: AppColors.green,
-      onSurface: AppColors.white,
+      onSurface: AppColors.black,
     ),
   );
 }

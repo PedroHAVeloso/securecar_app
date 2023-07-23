@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:securecar_app/ui/pages/login/login_page.dart';
-import 'package:securecar_app/ui/pages/register/register_page.dart';
+import 'package:securecar_app/ui/pages/register_user/register_user_page.dart';
 import 'package:securecar_app/ui/widgets/buttons/primary_button_widget.dart';
 import 'package:securecar_app/ui/widgets/buttons/secondary_button_widget.dart';
 
@@ -98,7 +98,7 @@ class WelcomePage extends StatelessWidget {
                   onPressed: () => Navigator.push(
                     context,
                     MaterialPageRoute<void>(
-                      builder: (context) => const RegisterPage(),
+                      builder: (context) => const RegisterUserPage(),
                     ),
                   ),
                   text: 'Cadastrar',

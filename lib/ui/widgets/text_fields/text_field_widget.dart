@@ -5,12 +5,16 @@ class TextFieldWidget extends StatelessWidget {
   /// Crie um campo de texto.
   const TextFieldWidget({
     required this.hintText,
+    this.fieldController,
     super.key,
     this.validator,
   });
 
   /// Valide o valor informado pelo usuário.
-  final String Function(String?)? validator;
+  final String? Function(String?)? validator;
+
+  /// Controlador do campo de texto.
+  final TextEditingController? fieldController;
 
   /// Texto exibido no campo.
   final String hintText;
@@ -21,6 +25,7 @@ class TextFieldWidget extends StatelessWidget {
       width: double.infinity,
       child: TextFormField(
         validator: validator,
+        controller: fieldController,
         decoration: InputDecoration(
           hintText: hintText,
         ),
