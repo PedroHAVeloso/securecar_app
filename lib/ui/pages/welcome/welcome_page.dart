@@ -7,6 +7,7 @@ import 'package:securecar_app/ui/widgets/buttons/secondary_button_widget.dart';
 
 /// Tela de boas-vindas.
 class WelcomePage extends StatelessWidget {
+  // ignore: public_member_api_docs
   const WelcomePage({super.key});
 
   @override

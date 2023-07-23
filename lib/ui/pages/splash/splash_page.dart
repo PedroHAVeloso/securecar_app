@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 /// Tela Splash.
 class SplashPage extends StatelessWidget {
+  // ignore: public_member_api_docs
   const SplashPage({super.key});
 
   @override

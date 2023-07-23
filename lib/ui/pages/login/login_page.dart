@@ -7,6 +7,7 @@ import 'package:securecar_app/ui/widgets/text_fields/text_field_widget.dart';
 
 /// Tela de login de usuário.
 class LoginPage extends StatelessWidget {
+  // ignore: public_member_api_docs
   const LoginPage({super.key});
 
   @override

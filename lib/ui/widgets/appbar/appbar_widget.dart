@@ -37,8 +37,8 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                   alignment: Alignment.centerLeft,
                   child: isBackButton
                       ? InkWell(
-                          onTap: () =>
-                              onTapBackButton ?? Navigator.pop(context),
+                          onTap:
+                              onTapBackButton ?? () => Navigator.pop(context),
                           child: SvgPicture.asset(
                             'assets/icons/back.svg',
                             height: 36,
