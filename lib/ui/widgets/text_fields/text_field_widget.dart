@@ -6,6 +6,7 @@ class TextFieldWidget extends StatelessWidget {
   const TextFieldWidget({
     required this.hintText,
     this.fieldController,
+    this.isObscureText = false,
     super.key,
     this.validator,
   });
@@ -16,6 +17,8 @@ class TextFieldWidget extends StatelessWidget {
   /// Controlador do campo de texto.
   final TextEditingController? fieldController;
 
+  final bool isObscureText;
+
   /// Texto exibido no campo.
   final String hintText;
 
@@ -25,6 +28,7 @@ class TextFieldWidget extends StatelessWidget {
       width: double.infinity,
       child: TextFormField(
         validator: validator,
+        obscureText: isObscureText,
         controller: fieldController,
         decoration: InputDecoration(
           hintText: hintText,

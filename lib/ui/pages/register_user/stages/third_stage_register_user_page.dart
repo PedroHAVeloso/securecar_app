@@ -5,8 +5,13 @@ part of '../register_user_page.dart';
 class ThirdStageRegisterUserPage extends StatelessWidget {
   // ignore: public_member_api_docs
   const ThirdStageRegisterUserPage({
+    required this.isValidCode,
+    required this.validationCode,
     super.key,
   });
+
+  final bool isValidCode;
+  final int validationCode;
 
   @override
   Widget build(BuildContext context) {
@@ -35,31 +40,53 @@ class ThirdStageRegisterUserPage extends StatelessWidget {
                     const Spacer(
                       flex: 4,
                     ),
-                    RichText(
-                      text: TextSpan(
-                        text: 'Enviamos-lhe um e-mail com um ',
-                        style: Theme.of(context).textTheme.titleMedium,
-                        children: [
-                          TextSpan(
-                            text: 'código ',
-                            style: Theme.of(context).textTheme.titleLarge,
-                          ),
-                          TextSpan(
-                            text: 'e verificação.\n'
-                                'Use o código no campo abaixo para ',
-                            style: Theme.of(context).textTheme.titleMedium,
-                          ),
-                          TextSpan(
-                            text: 'validarmos',
-                            style: Theme.of(context).textTheme.titleLarge,
-                          ),
-                          TextSpan(
-                            text: '.',
-                            style: Theme.of(context).textTheme.titleMedium,
-                          ),
-                        ],
+                    if (isValidCode)
+                      RichText(
+                        text: TextSpan(
+                          text: 'Enviamos-lhe um e-mail com um ',
+                          style: Theme.of(context).textTheme.titleMedium,
+                          children: [
+                            TextSpan(
+                              text: 'código ',
+                              style: Theme.of(context).textTheme.titleLarge,
+                            ),
+                            TextSpan(
+                              text: 'e verificação.\n'
+                                  'Use o código no campo abaixo para ',
+                              style: Theme.of(context).textTheme.titleMedium,
+                            ),
+                            TextSpan(
+                              text: 'validarmos',
+                              style: Theme.of(context).textTheme.titleLarge,
+                            ),
+                            TextSpan(
+                              text: '.',
+                              style: Theme.of(context).textTheme.titleMedium,
+                            ),
+                          ],
+                        ),
+                      )
+                    else
+                      RichText(
+                        text: TextSpan(
+                          text: 'Código ',
+                          style: Theme.of(context).textTheme.titleMedium,
+                          children: [
+                            TextSpan(
+                              text: 'incorreto ',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleLarge!
+                                  .apply(
+                                    color: Theme.of(context).colorScheme.error,
+                                  ),
+                            ),
+                            const TextSpan(
+                              text: '. Tente novamente ou reenvie o código.',
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
                     const Spacer(
                       flex: 3,
                     ),
@@ -87,7 +114,17 @@ class ThirdStageRegisterUserPage extends StatelessWidget {
                     PrimaryButtonWidget(
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
-                          registerCubit.jumpToThirdStage();
+                          if (int.parse(_codeController.text) ==
+                              validationCode) {
+                            registerCubit.validateUser(
+                              email: _emailController.text,
+                              validationCode: validationCode,
+                            );
+                          } else {
+                            registerCubit.invalidCode(
+                              validationCode: validationCode,
+                            );
+                          }
                         }
                       },
                       text: 'Validar',

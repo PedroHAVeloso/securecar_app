@@ -12,6 +12,7 @@ void main() async {
   runApp(const SplashPage());
 
   await Hive.initFlutter();
+  await Hive.openBox<void>('userInfo');
 
   runApp(const App());
 

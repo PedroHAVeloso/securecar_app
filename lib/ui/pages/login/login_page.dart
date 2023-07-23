@@ -42,6 +42,7 @@ class LoginPage extends StatelessWidget {
                       ),
                       TextFieldWidget(
                         hintText: 'Senha',
+                        isObscureText: true,
                       ),
                     ],
                   ),

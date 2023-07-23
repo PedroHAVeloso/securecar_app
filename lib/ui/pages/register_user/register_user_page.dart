@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:securecar_app/interactor/register_user/register_user_cubit.dart';
 import 'package:securecar_app/interactor/register_user/register_user_state.dart';
 import 'package:securecar_app/ui/widgets/appbar/appbar_widget.dart';
@@ -12,6 +13,7 @@ import 'package:securecar_app/ui/widgets/text_fields/text_field_widget.dart';
 part 'stages/first_stage_register_user_page.dart';
 part 'stages/second_stage_register_user_page.dart';
 part 'stages/third_stage_register_user_page.dart';
+part 'stages/registered_register_user_page.dart';
 
 final _nameController = TextEditingController();
 final _cpfController = TextEditingController();
@@ -46,7 +48,15 @@ class RegisterUserPage extends StatelessWidget {
               return const SecondStageRegisterUserPage();
 
             case RegisterUserThirdStageState():
-              return const ThirdStageRegisterUserPage();
+              return ThirdStageRegisterUserPage(
+                isValidCode: state.isValidCode,
+                validationCode: state.validationCode,
+              );
+
+            case RegisterUserRegisteredState():
+              return RegisteredRegisterUserPage(
+                isRegistered: state.isRegistered,
+              );
 
             default:
               return const SizedBox();

@@ -16,6 +16,7 @@ class CodeFieldWidget extends StatelessWidget {
       width: 240,
       height: 85,
       child: PinCodeTextField(
+        autoDisposeControllers: false,
         controller: fieldController,
         errorTextDirection: TextDirection.rtl,
         appContext: context,

@@ -52,6 +52,7 @@ class SecondStageRegisterUserPage extends StatelessWidget {
                         children: [
                           TextFieldWidget(
                             hintText: 'Senha',
+                            isObscureText: true,
                             fieldController: _passwordController,
                             // validator:
                             //     RegisterUserController.validatePassword(),
@@ -127,6 +128,7 @@ class SecondStageRegisterUserPage extends StatelessWidget {
                           ),
                           TextFieldWidget(
                             hintText: 'Repita a senha',
+                            isObscureText: true,
                             // validator:
                             //     RegisterUserController.validateRepeatPassword(
                             //   password: passwordController.text,
@@ -139,7 +141,13 @@ class SecondStageRegisterUserPage extends StatelessWidget {
                     PrimaryButtonWidget(
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
-                          registerCubit.jumpToThirdStage();
+                          registerCubit.jumpToThirdStage(
+                            name: _nameController.text,
+                            email: _emailController.text,
+                            cpf: _cpfController.text,
+                            birth: _birthController.text,
+                            password: _passwordController.text,
+                          );
                         }
                       },
                       text: 'Cadastrar',
