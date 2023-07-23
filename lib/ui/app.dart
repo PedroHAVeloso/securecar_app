@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:securecar_app/ui/pages/welcome/welcome_page.dart';
+import 'package:securecar_app/ui/pages/home/home_page.dart';
+import 'package:securecar_app/ui/pages/internet/internet_page.dart';
 import 'package:securecar_app/ui/utils/app_theme.dart';
 
 class App extends StatelessWidget {
@@ -19,7 +20,7 @@ class App extends StatelessWidget {
         Locale('pt'),
       ],
       theme: AppTheme.lightTheme,
-      home: const WelcomePage(),
+      home: const HomePage(),
     );
   }
 }

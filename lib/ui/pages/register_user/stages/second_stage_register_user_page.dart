@@ -54,8 +54,8 @@ class SecondStageRegisterUserPage extends StatelessWidget {
                             hintText: 'Senha',
                             isObscureText: true,
                             fieldController: _passwordController,
-                            // validator:
-                            //     RegisterUserController.validatePassword(),
+                            validator:
+                                RegisterUserController.validatePassword(),
                           ),
                           const SizedBox(
                             height: 20,
@@ -129,10 +129,10 @@ class SecondStageRegisterUserPage extends StatelessWidget {
                           TextFieldWidget(
                             hintText: 'Repita a senha',
                             isObscureText: true,
-                            // validator:
-                            //     RegisterUserController.validateRepeatPassword(
-                            //   password: passwordController.text,
-                            // ),
+                            validator:
+                                RegisterUserController.validateRepeatPassword(
+                              password: _passwordController.text,
+                            ),
                           ),
                         ],
                       ),

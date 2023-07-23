@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:securecar_app/interactor/register_user/register_user_controller.dart';
 import 'package:securecar_app/interactor/register_user/register_user_cubit.dart';
 import 'package:securecar_app/interactor/register_user/register_user_state.dart';
 import 'package:securecar_app/ui/widgets/appbar/appbar_widget.dart';
